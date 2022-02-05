@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22d05448-8a9d-46ad-9a8f-1fc224c1e43d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/carpark/Carpark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/carpark/CarParkManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/carpark/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/carpark/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/carpark/Carpark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carpark/Carpark.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="23j7QPcAz5u7y3bBCPeGsGJSI2V" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -95,9 +99,27 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="carpark" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Carpark" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="carpark.Carpark" />
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="carpark.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="carpark.Main" />
       <module name="untitled104" />
       <extension name="coverage">
         <pattern>
@@ -121,6 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Carpark" />
       </list>
@@ -139,7 +162,9 @@
       <workItem from="1642430660150" duration="255000" />
       <workItem from="1642431356909" duration="610000" />
       <workItem from="1642777812572" duration="1791000" />
-      <workItem from="1643818480847" duration="2331000" />
+      <workItem from="1643818480847" duration="2531000" />
+      <workItem from="1644002557664" duration="5230000" />
+      <workItem from="1644066368640" duration="1411000" />
     </task>
     <servers />
   </component>
