@@ -1,72 +1,66 @@
 package carpark;
-
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main  {
 
-    public static void main(String[] args) {
-        //CarParkManager myCarPark = new CarParkManager();
-        Vehicle vehicle = new Vehicle();
+    public static <string> void main(String[] args) {
+        Vehicle vehicleobj = new Vehicle();
 
         Scanner input = new Scanner(System.in);
         int menu;
-        String model;
+        int studentslot = 10;
+        int teacherslot = 10;
 
-        do {
-            System.out.println("WELCOME TO PARKING MANAGEMENT");
-            System.out.println("1: To Park Vehicle");
-            System.out.println("2: To Departure");
-            System.out.println("3: Show All Perked Vehicles");
-            System.out.println("0: To Exit");
-
+        while (true){
+            System.out.println("WELCOME TO PARKING");
+            System.out.println("==========================");
+            System.out.println("1: Park Vehicle");
+            System.out.println("2: Exit Vehicle");
+            System.out.println("3: Show All Vehicles List");
+            System.out.println("0: Exit System");
             System.out.print("Enter your choice: ");
-
             menu = input.nextInt();
             System.out.println();
 
             switch (menu) {
                 case 1: {
-                    String vType;
+                    String JobPosition;
+                    System.out.print("Are you teacher or Student in UOC : ");
+                    vehicleobj.setJobPosition(input.next());
+                    if (Objects.equals(vehicleobj.getJobPosition(), "student")) {
+                        studentslot = studentslot - 1;
+                    }
+                    if (Objects.equals(vehicleobj.getJobPosition(), "teacher")){
+                        teacherslot = teacherslot - 1;
+                    }
 
-                    System.out.println("Please choose The Vehicle type");
-                    System.out.println("C = Car");
-                    System.out.println("B = Motorbike");
-                    System.out.println("V = VAN");
+                    System.out.println("Enter Vehicle Number : ");
+                    vehicleobj.setVNumber(input.next());
+
+                    System.out.println("Enter yor Name : ");
+                    vehicleobj.setVName(input.next());
+
+                    String vType;
+                    System.out.println("Vehicle type");
+                    System.out.println("1 = Car");
+                    System.out.println("2 = Motorbike");
+                    System.out.println("3 = VAN");
                     vType = input.next();
 
-                    if (vType.equals("C")) {
-                        vehicle.setVType("Car");
-
-                        System.out.println("Enter VNumber");
-                        String VNumber = input.next();
-                        vehicle.setVNumber(VNumber);
-
-                        System.out.println(" Enter VName");
-                        String VName = input.next();
-                        vehicle.setVName(VName);
-
-                    } else if (vType.equals("B")) {
-                        vehicle.setVType("Motorbike");
-
-                        System.out.println("Enter VNumber");
-                        String VNumber = input.next();
-                        vehicle.setVNumber(VNumber);
-
-                        System.out.println(" Enter VName");
-                        String VName = input.next();
-                        vehicle.setVName(VName);
-
-                    } else if (vType.equals("V")) {
-                        vehicle.setVType("VAN");
-
-                        System.out.println("Enter VNumber");
-                        String VNumber = input.next();
-                        vehicle.setVNumber(VNumber);
-
-                        System.out.println(" Enter VName");
-                        String VName = input.next();
-                        vehicle.setVName(VName);
-
+                    switch (vType) {
+                        case "1" -> {
+                            vehicleobj.setVType("Car");
+                            break;
+                        }
+                        case "2" -> {
+                            vehicleobj.setVType("Motorbike");
+                            break;
+                        }
+                        case "3" -> {
+                            vehicleobj.setVType("VAN");
+                            break;
+                        }
                     }
 
                     break;
@@ -76,17 +70,26 @@ public class Main  {
                     break;
                 }
                 case 3: {
-                    System.out.println("List of All Parked Vehicles : ");
-                    //myCarPark.printParkedVehicleDetails();
-                   System.out.println(vehicle.getVName());
-                    System.out.println(vehicle.getVNumber());
-                    System.out.println(vehicle.getVType());
+
+                    System.out.println("List of All Parked Vehicles");
+                    System.out.println("==============================");
+
+                    System.out.println("Students packing slot available : "+ studentslot);
+                    System.out.println("teachers packing slot available : "+ teacherslot);
+
+                    System.out.println("Name : "+vehicleobj.getVName());
+                    System.out.println("Vehicle Number : "+vehicleobj.getVNumber());
+                    System.out.println("Vehicle Type : "+vehicleobj.getVType());
+                    System.out.println("Students or teacher : " + vehicleobj.getJobPosition() + "\n");
 
                     break;
                 }
 
                 case 0: {
                     System.out.println("\nThank you!\n");
+                    Star star = new Star();
+                    star.star();
+                    System.exit(0);
                     break;
                 }
                 default: {
@@ -94,7 +97,12 @@ public class Main  {
                     break;
                 }
             }
-        } while (menu != 0);
+
+        }
+
+
+
+
 
     }
 }
