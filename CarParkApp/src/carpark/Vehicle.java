@@ -4,7 +4,7 @@ public class Vehicle {
    private String VNumber; // vehicle number plate
    private String VName;   // vehicle oner name
    private String VType;   // vehicle type car or bicle
-   private String JobPosition;   //teacher student
+   private String JobPosition;   //teacher or student
 
    public Vehicle() {
       this.VName = VName;
@@ -13,7 +13,7 @@ public class Vehicle {
       this.JobPosition = JobPosition;
    }
 
-   //setters
+   //Setters
    public void setVName(String VName) {
       this.VName = VName;
    }
@@ -27,7 +27,7 @@ public class Vehicle {
       this.JobPosition = JobPosition;
    }
 
-   //getters
+   //Getters
    public String getVName() {
       return VName;
    }
@@ -40,6 +40,5 @@ public class Vehicle {
    public String getJobPosition() {
       return JobPosition;
    }
-
 
 }

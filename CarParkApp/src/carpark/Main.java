@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main  {
 
     public static <string> void main(String[] args) {
-        Vehicle vehicleobj = new Vehicle();
+        Vehicle vehicleobj = new Vehicle(); // vehicle object
 
         Scanner input = new Scanner(System.in);
         int menu;
@@ -13,6 +13,8 @@ public class Main  {
         int teacherslot = 10;
 
         while (true){
+            
+            // main menue
             System.out.println("WELCOME TO PARKING");
             System.out.println("==========================");
             System.out.println("1: Park Vehicle");
@@ -41,6 +43,7 @@ public class Main  {
                     System.out.println("Enter yor Name : ");
                     vehicleobj.setVName(input.next());
 
+                    // second menue
                     String vType;
                     System.out.println("Vehicle type");
                     System.out.println("1 = Car");
@@ -81,7 +84,6 @@ public class Main  {
                     System.out.println("Vehicle Number : "+vehicleobj.getVNumber());
                     System.out.println("Vehicle Type : "+vehicleobj.getVType());
                     System.out.println("Students or teacher : " + vehicleobj.getJobPosition() + "\n");
-
                     break;
                 }
 
@@ -99,10 +101,6 @@ public class Main  {
             }
 
         }
-
-
-
-
 
     }
 }
